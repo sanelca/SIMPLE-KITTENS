@@ -1,0 +1,11 @@
+<h1>All Kittens</h1>
+<ul id="kittens">
+  <% @kittens.each do |kitten| %>
+    <li>
+        <%= link_to kitten.name, kitten_path(kitten), class: 'kitten_name' %>
+        <%= link_to "edit", edit_kitten_path(kitten) %>
+        <%= link_to "delete", kitten_path(kitten), method: :delete, data: {confirm: "Really delete the kitten?"} %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Create a New Kitten", new_kitten_path, class: "new_kitten" %>

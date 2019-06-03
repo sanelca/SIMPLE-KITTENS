@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+      <%= link_to "Kittens", kittens_path %>
+      <%= link_to "Create new", new_kitten_path %>
+    </div>
+    <div class="contentWrapper">
+      <%= yield %>
+    </div>
   </body>
 </html>
