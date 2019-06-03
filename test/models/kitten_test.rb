@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class KittenTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save kitten without name" do
+    kitten = Kitten.new
+    assert_not kitten.save
+  end
 end
