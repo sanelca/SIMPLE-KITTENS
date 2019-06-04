@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SIMPLEKittens</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header">
+      <%= link_to "Kittens", kittens_path %>
+      <%= link_to "Create new", new_kitten_path %>
+    </div>
+    <div class="contentWrapper">
+      <%= yield %>
+    </div>
+  </body>
+</html>
